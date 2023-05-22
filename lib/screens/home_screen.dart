@@ -11,8 +11,11 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-              onPressed: () => {context.go("/routeparams/12")},
-              child: const Text("Move to next path"))
+              onPressed: () => {context.go("/routepsarams/12")},
+              child: Container(
+                color: Colors.amber,
+                child: const Text("Move to next path"),
+              ))
         ],
       ),
     );
