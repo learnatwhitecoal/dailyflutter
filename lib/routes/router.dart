@@ -6,13 +6,14 @@ import 'package:go_router/go_router.dart';
 final appRouter = GoRouter(
   routes: [
     GoRoute(
-      path: '/',
-      builder: (context, state) => const HomeScreen(),
-    ),
-    GoRoute(
-      path: '/routeparams/:id',
-      builder: (context, state) =>
-          ScreenWithPath(id: state.pathParameters['id']),
-    ),
+        path: '/',
+        builder: (context, state) => const HomeScreen(),
+        routes: [
+          GoRoute(
+            path: 'routeparams/:id',
+            builder: (context, state) =>
+                ScreenWithPath(id: state.pathParameters['id']),
+          ),
+        ]),
   ],
 );
