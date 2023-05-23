@@ -11,11 +11,15 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-              onPressed: () => {context.go("/routepsarams/12")},
-              child: Container(
-                color: Colors.amber,
-                child: const Text("Move to next path"),
-              ))
+              onPressed: () {
+                context.goNamed("productById", pathParameters: {"id": "10"});
+              },
+              child: const Text("Go to product page")),
+          TextButton(
+              onPressed: () {
+                context.goNamed("login");
+              },
+              child: const Text("Logout"))
         ],
       ),
     );

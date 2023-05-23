@@ -1,6 +1,4 @@
 import 'package:dailyflutter/routes/router.dart';
-import 'package:dailyflutter/screens/home_screen.dart';
-import 'package:dailyflutter/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: appRouter,
-      title: "Room Finder App",
-    );
+        routerConfig: appRouter, title: "Room Finder App");
   }
 }

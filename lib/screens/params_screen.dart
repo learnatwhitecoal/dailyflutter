@@ -13,7 +13,7 @@ class _ScreenWithPathState extends State<ScreenWithPath> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Welcome to Room Finder")),
-      body: Text("Params-${widget.id}"),
+      body: Text("Screen with state ${widget.id}"),
     );
   }
 }

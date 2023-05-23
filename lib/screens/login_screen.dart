@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -10,7 +11,13 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
           child: SizedBox(
         child: Column(
-          children: const [Text("Login")],
+          children: [
+            TextButton(
+                onPressed: () {
+                  context.goNamed("mainApp");
+                },
+                child: const Text("Go to home page"))
+          ],
         ),
       )),
     );
