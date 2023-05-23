@@ -8,14 +8,6 @@ import 'package:go_router/go_router.dart';
 // GoRouter configuration
 final appRouter = GoRouter(
   errorBuilder: (context, state) => const ErrorScreen(),
-  redirect: (context, state) {
-    bool isLoggedIn = true; //using bloc access this
-
-    if (isLoggedIn) {
-      return state.location != "/" ? state.location : "/";
-    }
-    return "/login";
-  },
   routes: [
     GoRoute(
         name: "mainApp",
@@ -28,11 +20,11 @@ final appRouter = GoRouter(
             builder: (context, state) =>
                 ScreenWithPath(id: state.pathParameters['id']),
           ),
+          GoRoute(
+            name: "login",
+            path: "login",
+            builder: (context, state) => const LoginScreen(),
+          ),
         ]),
-    GoRoute(
-      name: "login",
-      path: "/login",
-      builder: (context, state) => const LoginScreen(),
-    ),
   ],
 );

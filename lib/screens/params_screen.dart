@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ScreenWithPath extends StatefulWidget {
   final String? id;
@@ -12,8 +13,18 @@ class _ScreenWithPathState extends State<ScreenWithPath> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Welcome to Room Finder")),
-      body: Text("Screen with state ${widget.id}"),
-    );
+        appBar: AppBar(title: const Text("Welcome to Room Finder")),
+        body: SafeArea(
+            child: SizedBox(
+          child: Column(
+            children: [
+              TextButton(
+                  onPressed: () {
+                    context.goNamed("login");
+                  },
+                  child: const Text("Go to loing page"))
+            ],
+          ),
+        )));
   }
 }

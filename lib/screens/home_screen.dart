@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
               child: const Text("Go to product page")),
           TextButton(
               onPressed: () {
-                context.goNamed("login");
+                context.go("/login");
               },
               child: const Text("Logout"))
         ],
