@@ -12,12 +12,12 @@ class HomeScreen extends StatelessWidget {
         children: [
           TextButton(
               onPressed: () {
-                context.goNamed("productById", pathParameters: {"id": "10"});
+                context.push("/product/12");
               },
               child: const Text("Go to product page")),
           TextButton(
               onPressed: () {
-                context.go("/login");
+                context.push("/login");
               },
               child: const Text("Logout"))
         ],

@@ -20,7 +20,7 @@ class _ScreenWithPathState extends State<ScreenWithPath> {
             children: [
               TextButton(
                   onPressed: () {
-                    context.goNamed("login");
+                    context.pushNamed("login");
                   },
                   child: const Text("Go to loing page"))
             ],
